@@ -1,0 +1,5 @@
+/Users/viktortarkhanov/Desktop/C# seminars/task01/obj/Debug/net7.0/task01.csproj.AssemblyReference.cache
+/Users/viktortarkhanov/Desktop/C# seminars/task01/obj/Debug/net7.0/task01.GeneratedMSBuildEditorConfig.editorconfig
+/Users/viktortarkhanov/Desktop/C# seminars/task01/obj/Debug/net7.0/task01.AssemblyInfoInputs.cache
+/Users/viktortarkhanov/Desktop/C# seminars/task01/obj/Debug/net7.0/task01.AssemblyInfo.cs
+/Users/viktortarkhanov/Desktop/C# seminars/task01/obj/Debug/net7.0/task01.csproj.CoreCompileInputs.cache

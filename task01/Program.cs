@@ -8,5 +8,5 @@ a = -3; b = 9 -> нет
 */
 
 Console.WriteLine("Введите два числа: ");
-int number1 = convert.ToInt32(Console.readline());
-int number2 = convert.ToInt32(Console.readline());
+int number1 = Convert.ToInt32(Console.ReadLine());
+int number2 = Convert.ToInt32(Console.ReadLine());
