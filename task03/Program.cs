@@ -30,17 +30,17 @@ if(number == 4)
 else
 if(number == 5)
 {
-    Console.WriteLine("Вторник");
+    Console.WriteLine("Пятница");
 }
 else
 if(number == 6)
 {
-    Console.WriteLine("Вторник");
+    Console.WriteLine("Суббота");
 }
 else
 if(number == 7)
 {
-    Console.WriteLine("Вторник");
+    Console.WriteLine("Воскресенье");
 }
 else
 {
