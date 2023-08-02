@@ -4,6 +4,7 @@
 a = 5; b = 7 -> max = 7
 a = 2; b = 10 -> max = 10
 a = -9; b = -3 -> max = -3
+Дополнительно: + учитывает если числа равны
 */
 
 Console.WriteLine("Введите первое число: ");
@@ -17,4 +18,8 @@ if (number1 > number2)
 else
 {
     Console.WriteLine("Наибольшеe число: max=" + number2);
+}
+if(number1 == number2)
+{
+    Console.WriteLine("Числа равны");
 }
