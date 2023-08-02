@@ -8,4 +8,7 @@ if(number>99 && number<1000)
 {
 Console.WriteLine("Последняя цифра: "+ number%10);
 }
-
+else
+{
+    Console.WriteLine("Число не трёхзначное,чё считать не умеешь?!");
+}
