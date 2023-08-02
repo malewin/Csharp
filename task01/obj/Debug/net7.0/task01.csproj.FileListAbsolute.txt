@@ -3,3 +3,13 @@
 /Users/viktortarkhanov/Desktop/C# seminars/task01/obj/Debug/net7.0/task01.AssemblyInfoInputs.cache
 /Users/viktortarkhanov/Desktop/C# seminars/task01/obj/Debug/net7.0/task01.AssemblyInfo.cs
 /Users/viktortarkhanov/Desktop/C# seminars/task01/obj/Debug/net7.0/task01.csproj.CoreCompileInputs.cache
+/Users/viktortarkhanov/Desktop/C# seminars/task01/bin/Debug/net7.0/task01
+/Users/viktortarkhanov/Desktop/C# seminars/task01/bin/Debug/net7.0/task01.deps.json
+/Users/viktortarkhanov/Desktop/C# seminars/task01/bin/Debug/net7.0/task01.runtimeconfig.json
+/Users/viktortarkhanov/Desktop/C# seminars/task01/bin/Debug/net7.0/task01.dll
+/Users/viktortarkhanov/Desktop/C# seminars/task01/bin/Debug/net7.0/task01.pdb
+/Users/viktortarkhanov/Desktop/C# seminars/task01/obj/Debug/net7.0/task01.dll
+/Users/viktortarkhanov/Desktop/C# seminars/task01/obj/Debug/net7.0/refint/task01.dll
+/Users/viktortarkhanov/Desktop/C# seminars/task01/obj/Debug/net7.0/task01.pdb
+/Users/viktortarkhanov/Desktop/C# seminars/task01/obj/Debug/net7.0/task01.genruntimeconfig.cache
+/Users/viktortarkhanov/Desktop/C# seminars/task01/obj/Debug/net7.0/ref/task01.dll
