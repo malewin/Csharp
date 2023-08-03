@@ -17,12 +17,12 @@ if (number1 > number2)
     Console.WriteLine("Наименьшее число: min=" + number2);
 }
 else
-if (number1 < number2)
+if (number1 < number2)                                     // пришлось добавить чтобы в третьем случае с равенством не было лишнего текста
 {
     Console.WriteLine("Наибольшеe число: max=" + number2);
     Console.WriteLine("Наименьшее число: min=" + number1);
 }
-else
+else                                                       // иначе тут были проблемки с синтаксисом
 if(number1 == number2)
 {
     Console.WriteLine("Числа равны");
