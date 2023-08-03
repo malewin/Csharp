@@ -14,11 +14,15 @@ int number2 = Convert.ToInt32(Console.ReadLine());
 if (number1 > number2)
 {
     Console.WriteLine("Наибольшеe число: max=" + number1);
+    Console.WriteLine("Наименьшее число: min=" + number2);
 }
 else
+if (number1 < number2)
 {
     Console.WriteLine("Наибольшеe число: max=" + number2);
+    Console.WriteLine("Наименьшее число: min=" + number1);
 }
+else
 if(number1 == number2)
 {
     Console.WriteLine("Числа равны");
