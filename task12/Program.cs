@@ -4,17 +4,17 @@
 34, 5 -> не кратно, остаток 4
 16, 4 -> кратно */
 
-Console.Writeline("Введите первое число")
-int number1 = Convert.ToInt32(Console.Readline());
-Console.Writeline("Введите второе число")
-int number2 = Convert.ToInt32(Console.Readline());
+Console.WriteLine("Введите первое число");
+int number1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите второе число");
+int number2 = Convert.ToInt32(Console.ReadLine());
 int ostatok = number1 % number2;
 
-if(number1 % number2 = 0 && number2 % number1 = 0)
+if(number1 % number2 == 0)
 {
-    Console.Writeline("Числа кратны");
+    Console.WriteLine("Числа кратны");
 }
 else
 {
-    Console.WriteLine(ostatok);
+    Console.WriteLine("Остаток от деления = " + ostatok);
 }
