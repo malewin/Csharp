@@ -12,5 +12,5 @@ if (number1==number2*number2 || number2==number1*number1)
 }
 else 
 {
-    Console.WriteLine("Одно число - не является квадратом другого");
+    Console.WriteLine("каждое из чисел - не является квадратом другого");
 }
