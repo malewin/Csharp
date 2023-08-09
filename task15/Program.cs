@@ -4,19 +4,28 @@
 7 -> да
 1 -> нет */
 
-int [] budni = {1,2,3,4,5};
-int [] vyhodnye = {6,7};
-Console.WriteLine("Введите цифру дня недели");
+int[] vyhodnye = { 6, 7 };
+Console.WriteLine("Введите цифру дня недели (1-понедельник; 7- воскресенье): ");
 int number = Convert.ToInt32(Console.ReadLine());
-if (number == budni[0] || number == budni[1] || number == budni[2] || number == budni[3] || number == budni[4])
+if (number >= 1 && number <= 7)
 {
-    Console.WriteLine("Это не выходной");
+    bool etoVyhi = false;
+    for (int i = 0; i <= vyhodnye.Length; i++)
+    {
+        if (vyhodnye[i] == number)
+        {
+            etoVyhi = true;
+            break;
+            Console.WriteLine($"выходной ли это? - {etoVyhi}");
+        }
+        else
+        {
+            
+        }
+    }
+    Console.WriteLine($"выходной ли это? - {etoVyhi}");
 }
-else if (number == vyhodnye[0] || number == vyhodnye[1])
-{
-    Console.WriteLine("УРА! - выходной");
-}
-else if (number != budni[0] || number != budni[1] || number != budni[2] || number != budni[3] || number != budni[4] && number != vyhodnye[0] || number != vyhodnye[1])
+else
 {
     Console.WriteLine("Такого дня недели нет");
 }
