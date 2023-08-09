@@ -10,17 +10,13 @@ int number = Convert.ToInt32(Console.ReadLine());
 if (number >= 1 && number <= 7)
 {
     bool etoVyhi = false;
-    for (int i = 0; i <= vyhodnye.Length; i++)
+    for (int i = 0; i < vyhodnye.Length; i++)
     {
         if (vyhodnye[i] == number)
         {
             etoVyhi = true;
             break;
             Console.WriteLine($"выходной ли это? - {etoVyhi}");
-        }
-        else
-        {
-            
         }
     }
     Console.WriteLine($"выходной ли это? - {etoVyhi}");
