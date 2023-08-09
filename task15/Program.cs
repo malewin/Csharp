@@ -5,7 +5,7 @@
 1 -> нет */
 
 int[] vyhodnye = { 6, 7 };
-Console.WriteLine("Введите цифру дня недели (1-понедельник; 7- воскресенье): ");
+Console.Write("Введите цифру дня недели (1-понедельник; 7- воскресенье): ");
 int number = Convert.ToInt32(Console.ReadLine());
 if (number >= 1 && number <= 7)
 {
