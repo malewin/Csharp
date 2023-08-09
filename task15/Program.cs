@@ -16,10 +16,10 @@ if (number >= 1 && number <= 7)
         {
             etoVyhi = true;
             break;
-            Console.WriteLine($"выходной ли это? - {etoVyhi}");
+            Console.WriteLine($"выходной? - {etoVyhi}");
         }
     }
-    Console.WriteLine($"выходной ли это? - {etoVyhi}");
+    Console.WriteLine($"выходной? - {etoVyhi}");
 }
 else
 {
