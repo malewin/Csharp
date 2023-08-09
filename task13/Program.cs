@@ -11,9 +11,9 @@ while (number > 999)
 if (number <= 999 && number > 99)
 {
     int thirdNumber = number % 10;
-    Console.WriteLine($"Третье число - {thirdNumber}");
+    Console.WriteLine($"Третья цифра - {thirdNumber}");
 }
 else
 {
-   Console.WriteLine("Третьего числа - нет"); 
+   Console.WriteLine("Третьей цифры - нет"); 
 }
