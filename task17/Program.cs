@@ -14,18 +14,18 @@ int coordY = Convert.ToInt32(Console.ReadLine());
 
 if(coordX > 0 && coordY > 0) 
 {
-Console.WriteLine($"Точка {coordX}:{coordY} находится в первой четверти системы координат");
+Console.WriteLine($"Точка [{coordX}:{coordY}] находится в первой четверти системы координат");
 }
 if(coordX < 0 && coordY > 0) 
 {
-Console.WriteLine($"Точка {coordX}:{coordY} находится во второй четверти системы координат");
+Console.WriteLine($"Точка [{coordX}:{coordY}] находится во второй четверти системы координат");
 }
 if(coordX < 0 && coordY < 0) 
 {
-Console.WriteLine($"Точка {coordX}:{coordY} находится в третьей четверти системы координат");
+Console.WriteLine($"Точка [{coordX}:{coordY}] находится в третьей четверти системы координат");
 }
 if(coordX > 0 && coordY < 0) 
 {
-Console.WriteLine($"Точка {coordX}:{coordY} находится в четвёртой четверти системы координат");
+Console.WriteLine($"Точка [{coordX}:{coordY}] находится в четвёртой четверти системы координат");
 }
 
