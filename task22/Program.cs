@@ -3,7 +3,7 @@
 
 Console.WriteLine("Введите число N");
 
-int numberN = Convert.ToInt32(Console.Readline());
+int numberN = Convert.ToInt32(Console.ReadLine());
 double result = 0;
 if (numberN < 0)
 {
