@@ -20,7 +20,7 @@ string Replace(string text, char oldValue, char newValue)
     for (int i = 0; i < length; i++)
     {
         if(text[i] == oldValue) result = result + $"{newValue}";
-        else result = result + $"{str[i]}";
+        else result = result + $"{text[i]}";
     }
 
     return result;
