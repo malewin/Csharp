@@ -12,16 +12,19 @@ string text = "- Я думаю, - сказал князь, улыбаясь, - �
 //            0123
 // s[3] //r
 
-string Replace(string rext, char oldValue, char newValue)
+string Replace(string text, char oldValue, char newValue)
 {
     string result = String.Empty;
 
     int length = text.length;
     for (int i = 0; i < length; i++)
     {
-        if(text[i] == oldValue) result + $"{newValue}";
+        if(text[i] == oldValue) result = result + $"{newValue}";
         else result + $"{str[i]}";
     }
 
     return result;
 }
+
+string newText = Replace(text, ' ','|');
+Console.WriteLine(newText);
