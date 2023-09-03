@@ -72,10 +72,39 @@ int [] NewArrayFromProizvPairElements (int [] array)         // "метод во
 }
 int [] newArray = NewArrayFromProizvPairElements(userArray); // задаём переменную нового массива через "метод возвращения нового массива"
 
-void PrintNewArray ()                                        // "метод вывода нового массива" на экран
+void PrintNewArray()                                        // "метод вывода нового массива" на экран
 {
-    Console.WriteLine("");
-    Console.WriteLine($"Ваш новый массив из попарных произведений: {newArray}"); // интерполяция с переменной нового массива
+    if (arrayL % 2 == 0)
+    { 
+        Console.WriteLine("");
+        Console.WriteLine("Ваш новый массив из попарных произведений:  ");
+        Console.Write($"[");
+        for (int i = 0; i < arrayL / 2; i++)
+        {
+            Console.Write($" {newArray[i]},");
+        }
+        Console.Write($" ]");
+    }
+    else
+    {
+        int nextEndIndex = arrayL - 1; 
+        Console.WriteLine("");
+        Console.WriteLine("Ваш новый массив из попарных произведений:  ");
+        Console.Write($"[");
+        for (int i = 0; i <= nextEndIndex; i++)
+        {
+            if (i == nextEndIndex)
+            {
+                Console.Write($" {newArray[i]},");
+            }
+            else
+            {
+                Console.Write($" {newArray[i]},");
+                nextEndIndex--;  
+            }
+        }
+        Console.Write($" ]");
+    } 
 }
 PrintUserArray(userArray);
 PrintNewArray();
