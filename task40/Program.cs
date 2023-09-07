@@ -7,8 +7,9 @@
 int [] FillUserArray()
 {
     int [] array = new int [3];
-    for (int i = 0; i < length; i++)
+    for (int i = 0; i < 3; i++)
     {
+        Console.WriteLine("Введите значение стороны треугольника: ");
         array[i] = Convert.ToInt32(Console.ReadLine());
     }
     return array;
@@ -27,11 +28,11 @@ bool AnswerTriangle(int [] array)
     return answer;
 }
 
-bool answer = AnswerTriangle(arrayOfTriangle)
+bool answer = AnswerTriangle(arrayOfTriangle);
 
 void PrintAnswer(bool answer)
 {
-    if (answer = true)
+    if (answer == true)
     {
         Console.WriteLine("да, треугольник с такими сторонами существует");
     }
@@ -41,3 +42,5 @@ void PrintAnswer(bool answer)
     }
 
 }
+
+PrintAnswer(answer);
