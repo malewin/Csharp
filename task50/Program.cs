@@ -10,14 +10,22 @@
 17 -> такого числа в массиве нет
 */
 
-int[,] Get2DArray(int cols, int rows, int deviation)
+int[,] Get2DArray()
 {
+    Console.Write("Введите количество столбцов: ");
+    int cols = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите количество строк: ");
+    int rows = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите минимальное значение: ");
+    int min = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите максимальное значение: ");
+    int max = Convert.ToInt32(Console.ReadLine());
     int[,] array = new int[cols, rows];
-    for (int i = 0; i < rows; i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < cols; j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = new Random().Next(-deviation, deviation);
+            array[i, j] = new Random().Next(min, max);
         }
     }
     return array;
@@ -52,6 +60,6 @@ void Searcher(int [,] array2D)
     else Console.WriteLine("Такого элемента нет");
 }
 
-int [,] ourArray = Get2DArray(5,5,19);
+int [,] ourArray = Get2DArray();
 Print2DArray(ourArray);
 Searcher(ourArray);
