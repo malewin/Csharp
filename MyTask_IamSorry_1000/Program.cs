@@ -10,7 +10,7 @@ for (int i = 0; i < 1000; i++)
     Console.Write(iamsorry + " ");
     }
     else 
-    Console.ForegroundColor = ConsoleColor.Red;
+    Console.ForegroundColor = ConsoleColor.Yellow;
     Console.Write(iamsorry + " ");
 }
 
