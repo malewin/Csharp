@@ -25,9 +25,9 @@ int[,] pic = new int[,]
      {0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
      {0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 
-}
+};
 
-void PrintImage()
+void PrintImage(int[,] image)
 {
     for (int i = 0; i < image.GetLength(0); i++)
     {
@@ -35,9 +35,9 @@ void PrintImage()
         {
           if(image[i,j] == 0)  Console.Write($" ");
           else Console.Write($"+");
-          
         }
+        Console.WriteLine();
     }
 }
 
-Print
+PrintImage(pic);
