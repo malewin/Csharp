@@ -19,6 +19,7 @@
 6 встречается 2 раза
 */
 
+//задаём двумерный массив
 int[,] Get2DArray()
 {
     Console.Write("Введите количество столбцов: ");
@@ -40,6 +41,7 @@ int[,] Get2DArray()
     return array;
 }
 
+//выводим на экран думерный массив
 void Print2DArray(int[,] arrayToPrint)
 {
     System.Console.Write($"[ ]\t");
@@ -59,7 +61,7 @@ void Print2DArray(int[,] arrayToPrint)
     }
 }
 
-// Разворот матрицы в одномерный массив
+// конвертация двумерного массива в одномерный 
 int[] ExpandMatrix(int[,] matrix)
 {
 int n = matrix.GetLength(0) * matrix.GetLength(1);
@@ -76,21 +78,65 @@ n++;
 return array;
 }
 
-
-void Searcher(int [] array)
+// Сортировка элементов в одномерном массиве по возрастанию
+int [] CollectionSort(int[] array)
 {
-    Console.WriteLine("Какое число ищем в массиве?: ");
-    int userNumber = Convert.ToInt32(Console.ReadLine());
-    int count = 0;
-    for (int i = 0; i < array.Leng; i++)
-    {
-        if (array[i] == userNumber) count++;
-    }
-    Console.WriteLine($"Число {userNumber} встречается в массиве {count} раз");
+for (int i = 0; i < array.Length - 1; i++)
+{
+int minPosition = i;
+for (int j = i + 1; j < array.Length; j++)
+{
+if (array[j] < array[minPosition]) minPosition = j;
 }
+if (i != minPosition)
+{
+int tmp = array[i];
+array[i] = array[minPosition];
+array[minPosition] = tmp;
+}
+}
+return array;
+}
+
+//выводим на экран отсортированный одномерный массив
+void PrintArray(int [] arrayToPrint)
+{
+    Console.Write($"[ ");
+    for (int i = 0; i < arrayToPrint.Length; i++)
+    {
+        Console.Write($"{arrayToPrint[i]}, ");
+    }
+    Console.Write($"]");
+}
+
+/* делаем так, чтобы пока значение текущего индекса равно 
+значению переменной присвоенного из этого индекса мы крутим счетчик, иначе
+присваиваем переменной значение следующего индекса отличного от того на котором остановились.*/
+void Searcher(int[] array)
+{
+    int temp = array[0];
+    int count = 1;
+    for (int i = 1; i < array.Length; i++)
+    {
+        if (array[i] == temp) count++;
+        else
+        {
+            Console.WriteLine($"Число {temp} встречается в массиве {count} раз");
+            temp = array[i];
+            count = 1;
+        }
+        if (i == array.Length - 1)
+            Console.WriteLine($"Число {temp} встречается в массиве {count} раз");
+    }
+}
+
+
 
 int [,] array2D = Get2DArray();
 Print2DArray(array2D);
-Searcher(ExpandMatrix(array2D));
+PrintArray(CollectionSort(ExpandMatrix(array2D)));
+Console.WriteLine();
+Searcher(CollectionSort(ExpandMatrix(array2D)));
+
 
 
