@@ -82,7 +82,7 @@ void Searcher(int [] array)
     Console.WriteLine("Какое число ищем в массиве?: ");
     int userNumber = Convert.ToInt32(Console.ReadLine());
     int count = 0;
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Leng; i++)
     {
         if (array[i] == userNumber) count++;
     }
