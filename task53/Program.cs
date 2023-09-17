@@ -33,15 +33,8 @@ int[,] Get2DArray()
 
 void Print2DArray(int[,] arrayToPrint)
 {
-    System.Console.Write($"[ ]\t");
-    for (int i = 0; i < arrayToPrint.GetLength(1); i++)
-    {
-        Console.Write($"[{i}]\t");
-    }
-    System.Console.WriteLine();
     for (int i = 0; i < arrayToPrint.GetLength(0); i++)
     {
-        Console.Write($"[{i}]\t");
         for (int j = 0; j < arrayToPrint.GetLength(1); j++)
         {
             System.Console.Write(arrayToPrint[i,j] + "\t");
@@ -50,11 +43,12 @@ void Print2DArray(int[,] arrayToPrint)
     }
 }
 
-int[,] ResultArray(int[,] array)
+int [,] ResultArray(int[,] array)
 {
-    int cols = array.GetLength(0);
-    int rows = array.GetLength(1);
+    int rows = array.GetLength(0);
+    int cols = array.GetLength(1);
     int temp = 0;
+
     for (int i = 0; i < cols; i++)
     {
         temp = array[0, i];
@@ -65,5 +59,6 @@ int[,] ResultArray(int[,] array)
 }
 int [,] arr = Get2DArray();
 Print2DArray(arr);
+Console.WriteLine();
 int [,] arr2 = ResultArray(arr);
-ResultArray(arr2);
+Print2DArray(arr2);
