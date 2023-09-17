@@ -29,7 +29,6 @@ int[,] Get2DArray()
     return array;
 }
 
-//выводим на экран думерный массив
 void Print2DArray(int[,] arrayToPrint)
 {
     System.Console.Write($"[ ]\t");
@@ -80,33 +79,6 @@ int [,] FillZero(int [,] array, int [] coords)
     }
     return array;
 }
-
-/*
-int [,] DeleteCross( int [,] filledArray, int [] coords)
-{
-    int rows = filledArray.GetLength(0) - 1;
-    int cols = filledArray.GetLength(1) - 1;
-    int [,] arrayWithoutCross = new int[rows, cols];
-    int rowArrayWithoutCross = 0;
-    int colArrayWithoutCross = 0;
-    for (int i = 0; i < rows; i++)
-    {
-        if (i == coords[0]) continue;
-        else
-        for (int j = 0; j < cols; j++)
-        {
-        if (j == coords[1]) continue;
-        else
-        {
-         arrayWithoutCross[rowArrayWithoutCross, colArrayWithoutCross] = filledArray[i, j];
-         colArrayWithoutCross++;
-        }
-        }
-        rowArrayWithoutCross++;
-        colArrayWithoutCross = 0;
-    }
-    return arrayWithoutCross;
-} */
 
 int [,] DeleteCross( int [,] filledArray, int [] coords)
 {
