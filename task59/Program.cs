@@ -140,3 +140,5 @@ Console.WriteLine();
 Print2DArray(FillZero(arr, (CoordMinValue(arr))));
 Console.WriteLine();
 Print2DArray(DeleteCross(arr, (CoordMinValue(arr))));
+
+// удаляет строку с нулями и 1ый столбец с нужными эллементами вместо  столбца с нулями // надо доделать
