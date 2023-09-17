@@ -34,8 +34,15 @@ int[,] Get2DArray()
 
 void Print2DArray(int[,] arrayToPrint)
 {
+    System.Console.Write($"[ ]\t");
+    for (int i = 0; i < arrayToPrint.GetLength(1); i++)
+    {
+        Console.Write($"[{i}]\t");
+    }
+    System.Console.WriteLine();
     for (int i = 0; i < arrayToPrint.GetLength(0); i++)
     {
+        Console.Write($"[{i}]\t");
         for (int j = 0; j < arrayToPrint.GetLength(1); j++)
         {
             System.Console.Write(arrayToPrint[i,j] + "\t");
@@ -44,47 +51,34 @@ void Print2DArray(int[,] arrayToPrint)
     }
 }
 
-
-void SelectionSort(int[] array)
+int[,] Sort2DArray(int[,] array)
 {
-  for (int i = 0; i < array.Length - 1 ; i++)
-  {
-    int minPosition = i;
-    
-    for (int j = i + 1; j < array.Length; j++)
-    {
-        if(array[j] < array[minPosition]) minPosition = j; 
-    }
-    int temporary = array[i];
-    array[i] = array[minPosition];
-    array[minPosition] = temporary;
-  }
-}
-
-
-int [,] Sort2DArray (int [,] array)
-{
+    bool sortIsCompleted;
     int rows = array.GetLength(0);
     int cols = array.GetLength(1);
-    int [,] resultArray = new int [rows, cols];
-    for (int i = 0; i <= rows-1; i++)
+    do
     {
-        int [] maxPosR = [i, j];
-        for (int j = i + 1 ; j < rows; j++)
+        sortIsCompleted = false;
+        for (int i = 0; i < rows; i++) // начало для строк
         {
-            if(array[j] > array[maxPosR]) maxPosR = j;
-        }
-        int temporary = array[i];
-        array[i] = array[maxPosR];
-        array[maxPosR] = temporary;
-        for (int k = 0; k <= cols-1; k++)
-        {
-            int maxPosC = k;
-            for (int m = k + 1; m < cols; m++)
+            for (int j = 1; j < cols; j++) // начало для столбцов
             {
-               if 
+                
+                if (array[i, j - 1] < array[i, j]) 
+                {
+                int temporary = array[i, j - 1];
+                array[i, j - 1] = array[i, j];
+                array[i, j] = temporary;
+                sortIsCompleted = true;
+                }
             }
         }
-    }
-    return resultArray;
+    } while (sortIsCompleted);
+        return array;
 }
+
+int [,] userArray = Get2DArray();
+Print2DArray(userArray);
+Console.WriteLine();
+int [,] sort2DArray = Sort2DArray(userArray);
+Print2DArray(sort2DArray);
