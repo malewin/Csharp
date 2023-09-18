@@ -82,19 +82,14 @@ void PrintArray(int [] arrayToPrint)
 
 void PrintAnswer(int [] arrayForAnalytics)
 {
-    int min = 0;
+    int min = arrayForAnalytics[0];
     int stringNumber = 0;
     for (int i = 1; i < arrayForAnalytics.Length ; i++)
     {
-        if (arrayForAnalytics[i-1] >= arrayForAnalytics[i])
+        if (min > arrayForAnalytics[i])
         {
         min = arrayForAnalytics[i];
         stringNumber = (i);
-        }
-        else if (arrayForAnalytics[arrayForAnalytics.Length-1] < min)
-        {
-          min = arrayForAnalytics[arrayForAnalytics.Length-1];
-          stringNumber = (arrayForAnalytics.Length-1);  
         }
     }
    Console.WriteLine($"В {stringNumber} строке минимальная сумма элементов равная {min}"); 
