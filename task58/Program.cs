@@ -72,22 +72,17 @@ int [,] ScalarMultiplicationOMatrixElements(int [,] matrix1, int [,] matrix2)
 {
     int rows1 = matrix1.GetLength(0);
     int cols1 = matrix1.GetLength(1);
-    int rows2 = matrix2.GetLength(0);
     int cols2 = matrix2.GetLength(1);
     int [,] readyMatrix = new int[rows1, cols2];
-    int multiplicProduct = 1;
 
     for (int i = 0; i < rows1; i++)
     {
-        for (int m = 0; m < cols2; m++)
+        for (int j = 0; j < cols2; j++)
         {
-            for (int j = 0; j < cols1; j++)
+            readyMatrix[i, j] = 0;
+            for (int m = 0; m < cols1; m++)
             {
-                for (int n = 0; n < rows2; n++)
-                {
-                  multiplicProduct = matrix1[i, j] * matrix2[n, m];
-                  readyMatrix[i, m] += multiplicProduct;
-                }
+                  readyMatrix[i, j] += matrix1[i, m] * matrix2[m, j];
             }
         }
     }
@@ -104,5 +99,3 @@ Console.WriteLine();
 Print2DArray(matrix2);
 Console.WriteLine();
 Print2DArray(readyMatrix);
-
-//подправить
